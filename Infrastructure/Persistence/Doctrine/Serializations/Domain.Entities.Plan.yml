@@ -1,0 +1,12 @@
+Domain\Entities\Plan:
+  exclusion_policy: ALL
+  properties:
+
+    id:
+      expose: id
+
+    plan:
+      expose: true
+
+    price:
+      expose: true

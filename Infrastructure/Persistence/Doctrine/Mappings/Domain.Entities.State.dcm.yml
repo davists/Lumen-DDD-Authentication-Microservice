@@ -1,0 +1,41 @@
+Domain\Entities\State:
+    type: entity
+    table: state
+    indexes:
+        fk_state_1_idx:
+            columns:
+                - country_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 75
+            options:
+                fixed: false
+        uf:
+            type: string
+            nullable: true
+            length: 5
+            options:
+                fixed: false
+    manyToOne:
+        country:
+            targetEntity: Domain\Entities\Country
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                country_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

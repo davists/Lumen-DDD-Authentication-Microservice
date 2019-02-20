@@ -1,0 +1,45 @@
+checkout all changes
+git checkout -- .
+
+Create migration for tables - create migrations with specific names
+php Application/artisan make:migration alter_preco_quadra --table=user --path="../database/migrations"
+php Application/artisan make:migration alter_preco_quadra --create=user --path="../database/migrations"
+
+Apply migrations
+cd Application
+php artisan migrate --path="../database/migrations/"
+
+Running Seeders
+php artisan db:seed
+
+2.Doctrine generate yml mapping with namespace
+php artisan  doctrine:mapping:import yml --namespace='Domain\Entities\'
+
+3.Generate Entities
+php Application/artisan doctrine:generate:entities --generate-methods
+
+4.Generate proxies
+php Application/artisan doctrine:generate:proxies
+
+Doctrine laravel config file
+http://www.laraveldoctrine.org/docs/1.2/orm/config-file
+
+Doctrine field types
+http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html
+
+Psr-4 namespace
+after create, run:
+composer install
+composer dumpautoload
+
+Doctrine Metadata Mapping
+http://www.laraveldoctrine.org/docs/1.2/orm/meta-data
+
+2.Doctrine generate yml mapping with namespace
+php artisan  doctrine:mapping:import yml --namespace='Domain\NomeDoDominio\Entities\'
+
+3.Generate Entities
+php Application/artisan doctrine:generate:entities --generate-methods
+
+RabbitMq
+https://github.com/vladimir-yuldashev/laravel-queue-rabbitmq

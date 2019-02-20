@@ -1,0 +1,363 @@
+Domain\Entities\Company:
+    type: entity
+    table: company
+    indexes:
+        fk_company_1_idx:
+            columns:
+                - plan_id
+        fk_company_2_idx:
+            columns:
+                - country_id
+        fk_company_3_idx:
+            columns:
+                - state_id
+        fk_company_4_idx:
+            columns:
+                - city_id
+    uniqueConstraints:
+        cnpj_UNIQUE:
+            columns:
+                - cnpj
+        email_UNIQUE:
+            columns:
+                - email
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        cnpj:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        socialReason:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: social_reason
+        email:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        telephone:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        address:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        addressNumber:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: address_number
+        addressDistrict:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: address_district
+        addressComplement:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: address_complement
+        zipcode:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        latitude:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        longitude:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        distanceToZeroReferential:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: distance_to_zero_referential
+        active:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+        cnae:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        presentation:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+        policies:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+        contactPerson:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: contact_person
+        contactPersonTelephone:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: contact_person_telephone
+        logo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        thumbnail:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        createdAt:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: created_at
+        deletedAt:
+            type: datetime
+            nullable: true
+            column: deleted_at
+        cityShippingDays:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: '0'
+            column: city_shipping_days
+        stateShippingDays:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: '0'
+            column: state_shipping_days
+        countryShippingDays:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: '0'
+            column: country_shipping_days
+        useTerms:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: use_terms
+        bank:
+            type: string
+            nullable: false
+            length: 105
+            options:
+                fixed: false
+        bankCode:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+            column: bank_code
+        agency:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        agencyVd:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+            column: agency_vd
+        account:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        accountVd:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+            column: account_vd
+        accountType:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: account_type
+        documentNumber:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: document_number
+        legalName:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: legal_name
+        splitPercentage:
+            type: string
+            nullable: false
+            length: 10
+            options:
+                fixed: false
+            column: split_percentage
+        transferInterval:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: transfer_interval
+        transferDay:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: transfer_day
+        ambientePagarme:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: ambiente_pagarme
+        homologacaoRecipientId:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: homologacao_recipient_id
+        producaoRecipientId:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: producao_recipient_id
+        uuid:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        slugName:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: slug_name
+    manyToOne:
+        plan:
+            targetEntity: Domain\Entities\Plan
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                plan_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        country:
+            targetEntity: Domain\Entities\Country
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                country_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        state:
+            targetEntity: Domain\Entities\State
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                state_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        city:
+            targetEntity: Domain\Entities\City
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                city_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

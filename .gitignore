@@ -1,0 +1,6 @@
+Application/storage
+/vendor
+composer.lock
+Application/.env
+.idea
+storage/*

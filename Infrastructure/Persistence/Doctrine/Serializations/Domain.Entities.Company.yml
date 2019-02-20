@@ -1,0 +1,129 @@
+Domain\Entities\Company:
+  exclusion_policy: ALL
+  properties:
+
+    id:
+      expose: true
+
+    name:
+      expose: true
+
+    cnpj:
+      expose: true
+
+    socialReason:
+      expose: true
+      serialized_name: socialReason
+
+    logo:
+      expose: true
+      serialized_name: logo
+
+    email:
+      expose: truet
+
+    telephone:
+      expose: true
+      serialized_name: telephone
+
+    address:
+      expose: true
+      serialized_name: address
+
+    addressNumber:
+      expose: true
+      serialized_name: addressNumber
+
+    addressDistrict:
+      expose: true
+      serialized_name: addressDistrict
+
+    addressComplement:
+      expose: true
+      serialized_name: addressComplement
+
+    zipcode:
+      expose: true
+      serialized_name: zipcode
+
+    cnae:
+      expose: true
+      serialized_name: cnae
+
+    contactPerson:
+      expose: true
+      serialized_name: contactPerson
+
+    policies:
+      expose: true
+
+    useTerms:
+      expose: true
+      serialized_name: useTerms
+
+    contactPersonTelephone:
+      expose: true
+      serialized_name: contactPersonTelephone
+
+    plan:
+      expose: true
+      serialized_name: plan
+
+    cityShippingDays:
+      expose: true
+      serialized_name: cityShippingDays
+
+    stateShippingDays:
+      expose: true
+      serialized_name: stateShippingDays
+
+    countryShippingDays:
+      expose: true
+      serialized_name: countryShippingDays
+
+    bank:
+      expose: true
+      serialized_name: bank
+
+    bankCode:
+      expose: true
+      serialized_name: bankCode
+
+    agency:
+      expose: true
+      serialized_name: agency
+
+    agencyVd:
+      expose: true
+      serialized_name: agencyVd
+
+    account:
+      expose: true
+      serialized_name: account
+
+    accountVd:
+      expose: true
+      serialized_name: accountVd
+
+    accountType:
+      expose: true
+      serialized_name: accountType
+
+    documentNumber:
+      expose: true
+      serialized_name: documentNumber
+
+    legalName:
+      expose: true
+      serialized_name: legalName
+
+    recipientId:
+      expose: true
+      serialized_name: recipientId
+
+    splitPercentage:
+      expose: true
+      serialized_name: splitPercentage
+
+
+

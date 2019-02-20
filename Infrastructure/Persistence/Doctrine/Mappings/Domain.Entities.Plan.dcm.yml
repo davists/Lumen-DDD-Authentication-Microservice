@@ -1,0 +1,40 @@
+Domain\Entities\Plan:
+    type: entity
+    table: plan
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        plan:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        price:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+        active:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+        createdAt:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: created_at
+        deletedAt:
+            type: datetime
+            nullable: true
+            column: deleted_at
+    lifecycleCallbacks: {  }

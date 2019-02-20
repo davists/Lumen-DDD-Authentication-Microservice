@@ -1,0 +1,66 @@
+Domain\Entities\User:
+  exclusion_policy: ALL
+  properties:
+
+    id:
+      expose: true
+      serialized_name: id
+
+    name:
+      expose: true
+      serialized_name: name
+
+    email:
+      expose: true
+      serialized_name: email
+
+    addressZipcode:
+      expose: true
+      serialized_name: addressZipcode
+
+    addressStreet:
+      expose: true
+      serialized_name: addressStreet
+
+    addressDistrict:
+      expose: true
+      serialized_name: addressDistrict
+
+    addressNumber:
+      expose: true
+      serialized_name: addressNumber
+
+    addressCity:
+      expose: true
+      serialized_name: addressCity
+
+    addressState:
+      expose: true
+      serialized_name: addressState
+
+    telephone:
+      expose: true
+      serialized_name: telephone
+
+    homeTelephone:
+      expose: true
+      serialized_name: homeTelephone
+
+    oneClickBuy:
+      expose: true
+      serialized_name: oneClickBuy
+      type: boolean
+
+    cpf:
+      expose: true
+      serialized_name: cpf
+
+    birthday:
+      expose: true
+      serialized_name: birthday
+
+    createdAt:
+      expose: true
+      serialized_name: createdAt
+
+
